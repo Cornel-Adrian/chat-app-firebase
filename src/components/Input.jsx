@@ -1,9 +1,19 @@
 import React from 'react'
+import Img from "../img/Img.png"
+import Attach from "../img/Attach.png"
 
 const Input = () => {
   return (
     <div className='input'>
-      <input type="text" name="" id="" />
+      <input type="text" placeholder='Type something'/>
+      <div className='send'>
+        <img src={Attach} alt="" />
+        <input type="file" style={{display:"none"}} id="file" />
+        <label htmlFor="file">
+          <img src={Img}></img>
+        </label>
+        <button>Send</button>
+      </div>
     </div>
   )
 }
